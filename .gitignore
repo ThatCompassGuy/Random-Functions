@@ -11,5 +11,11 @@ yarn-debug.log*
 # Optional npm cache directory
 .npm
 
-# Misc
+# IDE
 settings.json
+out
+
+# Misc
+test.ts
+test.js
+test.js.map
