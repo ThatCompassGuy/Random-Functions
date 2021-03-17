@@ -8,7 +8,7 @@ export default function fromCelsius(num: number | string, convertTo: string) : s
         case 'kelvin':
             return num + 273.15 + 'K';
 
-        case 'celsuis':
+        case 'celsius':
             return num + '°C';
 
         default:
