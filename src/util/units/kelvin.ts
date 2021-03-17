@@ -9,7 +9,7 @@ export default function fromKelvin(num: number | string, convertTo: string) : st
             return (5 - 273.15) * 9 / 5 + 32 + '°F';
 
         case 'kelvin':
-            num + 'K';
+            return num + 'K';
 
         default:
             throw new Error(JSON.stringify(convertTo) + ' is not a valid unit of temperature');
