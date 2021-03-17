@@ -12,7 +12,7 @@ export default function findDupe(arr: any[]) : number[] | undefined  {
 
     for (let i = 0; i < arr.length; i++) {
         if (arr[i + 1] === arr[i]) {
-            duplicates.push(arr[i]);
+            duplicates.push(parseInt(arr[i]));
             res = true;
         }
     }
