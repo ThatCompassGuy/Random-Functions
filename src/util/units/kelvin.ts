@@ -1,4 +1,4 @@
-export default function fromKelvin(num: number | string, convertTo: string) {
+export default function fromKelvin(num: number | string, convertTo: string) : string {
     num = Number(num);
     if (!convertTo) throw new Error('Unit to convert to must be provided');
     switch (convertTo.toLowerCase()) {
