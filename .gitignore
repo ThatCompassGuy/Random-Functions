@@ -10,3 +10,6 @@ yarn-debug.log*
 
 # Optional npm cache directory
 .npm
+
+# Misc
+settings.json
