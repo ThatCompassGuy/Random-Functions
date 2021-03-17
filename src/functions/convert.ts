@@ -1,4 +1,4 @@
-import { fromCelsius, fromFahrenheit, fromKelvin, Options } from '../../util';
+import { fromCelsius, fromFahrenheit, fromKelvin, Options } from '../util';
 
 export default function convert(num: number | string, options: Options) : string {
     num = Number(num);
