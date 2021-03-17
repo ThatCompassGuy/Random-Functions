@@ -7,7 +7,7 @@ export default function findDupe(arr: any[]) : number[] | undefined  {
         .filter(e => !isNaN(e))
         .sort((a, b) => a - b);
 
-    let duplicates = [];
+    const duplicates = [];
     let res = false;
 
     for (let i = 0; i < arr.length; i++) {
