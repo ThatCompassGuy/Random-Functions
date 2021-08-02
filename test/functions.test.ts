@@ -1,4 +1,4 @@
-import { findDupe, ordinal, reverse, convert } from '../src/index';
+import { findDupe, ordinal, reverse, convert, deform } from '../src/index';
 
 test('find duplicate number in array', () => {
     // no dupe
@@ -58,7 +58,17 @@ test('convert temperatures', () => {
     expect(convert(1, { from: 'fahrenheit', to: 'celsius' })).toBe('-17.22222222222222°C');
     expect(convert(1, { from: 'fahrenheit', to: 'fahrenheit' })).toBe('1°F');
     // with rounding
-    expect(convert(2, { from: 'fahrenheit', to: 'kelvin', round: 1 })).toBe('256.5K');
-    expect(convert(2, { from: 'fahrenheit', to: 'celsius', round: 1 })).toBe('-16.7°C');
-    expect(convert(2, { from: 'fahrenheit', to: 'fahrenheit', round: 1 })).toBe('2.0°F');
+    expect(convert(2, { from: 'fahrenheit', to: 'kelvin', round: 1 })).toStrictEqual('256.5K');
+    expect(convert(2, { from: 'fahrenheit', to: 'celsius', round: 1 })).toStrictEqual('-16.7°C');
+    expect(convert(2, { from: 'fahrenheit', to: 'fahrenheit', round: 1 })).toStrictEqual('2.0°F');
+});
+
+test('deform strings', () => {
+    // without randomisation
+    expect(deform('hello world!', false)).toStrictEqual('hElLo wOrLd!');
+    
+    // with randomisation
+    const str = "this is a string";
+    expect(deform(str, true).length).toStrictEqual(16);
+    expect(deform(str, true).length).toStrictEqual(16);
 });
