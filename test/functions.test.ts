@@ -30,7 +30,6 @@ test('ordinals', () => {
 });
 
 test('reverse strings', () => {
-    // reverse text
     expect(reverse('This is a test')).toStrictEqual('tset a si sihT');
 });
 
