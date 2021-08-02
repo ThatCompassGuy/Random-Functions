@@ -1,12 +1,12 @@
 {
-  "name": "RandomFunctions",
+  "name": "random-functions",
   "version": "1.0.0",
-  "description": "A bunch of random functions",
+  "description": "A bunch of random functions!",
   "main": "src/index.ts",
   "directories": {
     "test": "test"
   },
-  "private": true,
+  "private": false,
   "scripts": {
     "test": "jest",
     "lint": "eslint . --ext .ts"
