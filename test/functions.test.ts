@@ -12,7 +12,7 @@ test('find duplicate number in array', () => {
     expect(findDupe([1, 1, 2, 2, 'another string'])).toStrictEqual([1, 2]);
 });
 
-test('ordinal', () => {
+test('ordinals', () => {
     // 1, 2, 3 and 4
     expect(ordinal(1)).toStrictEqual('1st');
     expect(ordinal(2)).toStrictEqual('2nd');
