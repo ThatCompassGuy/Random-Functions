@@ -1,11 +1,9 @@
-export default function findDupe(arr: any[]) : number[] | undefined  {
-    if (!arr) throw new Error('An array must be provided');
-    if (!Array.isArray(arr)) throw new Error('A valid array must be provided');
-    if (!arr[1]) throw new Error('There must be at least two elements in the array');
+import { valid } from '../util';
 
-    arr = arr
-        .filter(e => !isNaN(e))
-        .sort((a, b) => a - b);
+export default function findDupe(nums: any[]) : number | number[] | undefined  {
+    if (!valid(nums)) throw new Error('A valid array must be provided');
+    
+    nums = nums.filter((num) => !isNaN(num));
 
     const duplicates = [];
     let res = false;
@@ -18,4 +16,4 @@ export default function findDupe(arr: any[]) : number[] | undefined  {
     }
 
     return res ? duplicates : undefined;
-}
+}    return results.length == 1 ? results[0] : results.length == 0 ? undefined : results;
