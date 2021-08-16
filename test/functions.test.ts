@@ -4,11 +4,11 @@ test('find duplicate number in array', () => {
     // no dupe
     expect(findDupe(['1', '2', '3'])).toBeUndefined();
     // 1 dupe
-    expect(findDupe(['1', '2', '2'])).toStrictEqual([2]);
-    expect(findDupe(['1', '2', '2', 'sneaky string'])).toStrictEqual([2]);
+    expect(findDupe(['1', '2', '2'])).toStrictEqual(2);
+    expect(findDupe(['1', '2', '2', '2'])).toStrictEqual(2);
+    expect(findDupe(['1', '2', '2', 'sneaky string'])).toStrictEqual(2);
     // more than 1 dupe
-    expect(findDupe([1, 1, 1, 1, 1])).toStrictEqual([1, 1, 1, 1]);
-    expect(findDupe([1, 1, 2, 2])).toStrictEqual([1, 2]);
+    expect(findDupe([1, 1, 2, 2, 3])).toStrictEqual([1, 2]);
     expect(findDupe([1, 1, 2, 2, 'another string'])).toStrictEqual([1, 2]);
 });
 
