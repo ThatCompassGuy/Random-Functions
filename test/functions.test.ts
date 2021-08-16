@@ -69,5 +69,5 @@ test('deform strings', () => {
     // with randomisation
     const str = "this is a string";
     expect(deform(str, true).length).toStrictEqual(16);
-    expect(deform(str, true).length).toStrictEqual(16);
+    expect(deform(str, true).toLowerCase()).toStrictEqual(str);
 });
